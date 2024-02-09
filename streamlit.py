@@ -2,7 +2,7 @@ import streamlit as st
 from openai import OpenAI
 import openai
 from pinecone import Pinecone
-client1 = OpenAI()
+client1 = OpenAI(api_key=st.secrets.openai_key)
 from pinecone import Pinecone
 pc = Pinecone(api_key=st.secrets.pinecone_key)
 index = pc.Index("pdf-index")
